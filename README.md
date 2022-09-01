@@ -29,10 +29,11 @@ The SDK connects with gRPC via the StarGate API, so the port should always be `4
 For the secure bundle, download it from the "Connect" tab on the Astra dashboard.  By default it will be in your `~/Downloads` directory.  Feel free to move it to another location, and then unzip it.  It must be unzipped (for now) so that the program can get at the TLS certificate files (`key`, `cert`, and `ca.crt`).  Example:
 
 ```
-export ASTRA_SECURE_BUNDLE_DIR = "/Users/aaronploetz/local/stackoverflow/"
+mv secure-connect-stackogcp.zip ~/local/stackoverflow/
+unzip secure-connect-stackogcp.zip
 ```
 
-To assist with this part of the setup, copy the `sample.env` file to `.env` and edit `.env` with your Astra information.
+To assist with this next part of the setup, copy the `sample.env` file to `.env` and edit `.env` with your Astra information.
 
 ```bash
 % cp sample.env .env
