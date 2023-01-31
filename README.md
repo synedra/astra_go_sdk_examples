@@ -19,27 +19,22 @@ go version go1.18.2 darwin/amd64
 These programs each require three environment variables to be set.
 
 ```
-ASTRA_URI_w_PORT = "<DATABASEID>-<REGION>.apps.astra.datastax.com:443"
-ASTRA_TOKEN = "<TOKEN>"
-ASTRA_SECURE_BUNDLE_DIR = "<LOCATION OF UNZIPPED SECURE BUNDLE>"
+ASTRA_TOKEN="<TOKEN>"
+ASTRA_KEYSPACE="your_keyspace_name"
+ASTRA_SECURE_BUNDLE_LOCATION="<LOCATION OF ASTRA SECURE BUNDLE FILE>"
 ```
 
-The SDK connects with gRPC via the StarGate API, so the port should always be `443`.  The Astra token will start with a "AstraCS" prefix, which should also be included in the variable definition.
+The SDK connects with gRPC via the StarGate API, so the port should always be `443` (_don't have to worry about this anymore, but FYI_).  The Astra token will start with a "AstraCS" prefix, which should also be included in the variable definition.
 
-For the secure bundle, download it from the "Connect" tab on the Astra dashboard.  By default it will be in your `~/Downloads` directory.  Feel free to move it to another location, and then unzip it.  It must be unzipped (for now) so that the program can get at the TLS certificate files (`key`, `cert`, and `ca.crt`).  Example:
+For the secure bundle, download it from the "Connect" tab on the Astra dashboard.  By default it will be in your `~/Downloads` directory.  Feel free to move it to another location.
 
-```
-mv secure-connect-stackogcp.zip ~/local/stackoverflow/
-unzip secure-connect-stackogcp.zip
-```
-
-To assist with this next part of the setup, copy the `sample.env` file to `.env` and edit `.env` with your Astra information.
+To assist with this next part of the setup, copy the `sample.env` file to `.env`:
 
 ```bash
 % cp sample.env .env
 ```
 
-Then simply `source` the file to instantiate the environment variables.
+Then edit `.env` with your Astra information, and simply `source` the file to instantiate the environment variables.
 
 ```bash
 % source .env
@@ -53,7 +48,6 @@ To run:
 
 ```bash
 % go run goAstraConnect.go
-Defining TLS config
 Building client connection
 SELECTing from system.local
 cluster_name: cndb
@@ -101,7 +95,6 @@ Then, running this program with the name "Aaron" or "Patrick" should retrieve re
 
 ```
 % go run goAstraQuery.go Patrick
-Defining TLS config
 Building client connection
 SELECTing from stackoverflow.user_offers
 Patrick - 65054640-2325-11ed-9388-cb18a63d6f83 - 65054641-2325-11ed-9388-cb18a63d6f83 - Amz $20 gift card.
