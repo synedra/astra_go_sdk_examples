@@ -226,6 +226,8 @@ github.com/d2g/dhcp4server v0.0.0-20181031114812-7d4a0a7f59a5/go.mod h1:Eo87+Kg/
 github.com/d2g/hardwareaddr v0.0.0-20190221164911-e7d9fbe030e4/go.mod h1:bMl4RjIciD2oAxI7DmWRx6gbeqrkoLqv3MV0vzNad+I=
 github.com/datastax-ext/astra-go-sdk v0.0.0-20220812144235-67edeb4ed198 h1:3Z3C1KHt9vUgklTNPSEFvzXq04RZIIU/GfglG4QHEsY=
 github.com/datastax-ext/astra-go-sdk v0.0.0-20220812144235-67edeb4ed198/go.mod h1:endgzv/822s8eJi17v3g8Zg275D6aYvp/RQzpLrcACU=
+github.com/datastax-ext/astra-go-sdk v0.0.0-20221209134650-da2d6735279c h1:HQE/BjJN7HfdE/C7UFky3lHf/QXPsf13UxmNTjj10S8=
+github.com/datastax-ext/astra-go-sdk v0.0.0-20221209134650-da2d6735279c/go.mod h1:endgzv/822s8eJi17v3g8Zg275D6aYvp/RQzpLrcACU=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/denverdino/aliyungo v0.0.0-20190125010748-a747050bb1ba/go.mod h1:dV8lFg6daOBZbT6/BDGIz6Y3WFGn8juu6G+CQ6LHtl0=

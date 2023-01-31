@@ -2,6 +2,8 @@ module goAstraConnect
 
 go 1.18
 
+require github.com/datastax-ext/astra-go-sdk v0.0.0-20221209134650-da2d6735279c
+
 require (
 	github.com/Azure/go-ansiterm v0.0.0-20210617225240-d185dfc1b5a1 // indirect
 	github.com/Microsoft/go-winio v0.4.17 // indirect
@@ -9,7 +11,6 @@ require (
 	github.com/cenkalti/backoff/v4 v4.1.2 // indirect
 	github.com/containerd/cgroups v1.0.1 // indirect
 	github.com/containerd/containerd v1.5.9 // indirect
-	github.com/datastax-ext/astra-go-sdk v0.0.0-20220812144235-67edeb4ed198 // indirect
 	github.com/docker/distribution v2.7.1+incompatible // indirect
 	github.com/docker/docker v20.10.11+incompatible // indirect
 	github.com/docker/go-connections v0.4.0 // indirect
